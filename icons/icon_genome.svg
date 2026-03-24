@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Era 4 Icon: Chromosome / Genome — Whole Genome Sequencing -->
+  <title>Genome</title>
+  <defs>
+    <style>
+      .chr { fill: none; stroke: #C87A20; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+      .dot { fill: #C87A20; }
+      .band { fill: #C87A20; opacity: 0.25; }
+    </style>
+  </defs>
+
+  <!--
+    Stylised chromosome X shape (meta-centric).
+    Two chromatids crossing at the centromere.
+  -->
+
+  <!-- Left chromatid (upper arm) -->
+  <path class="chr"
+        d="M 22 14 C 22 20 30 28 36 36 C 40 41 42 46 50 50"/>
+  <!-- Right chromatid (upper arm) -->
+  <path class="chr"
+        d="M 78 14 C 78 20 70 28 64 36 C 60 41 58 46 50 50"/>
+  <!-- Left chromatid (lower arm) -->
+  <path class="chr"
+        d="M 50 50 C 42 54 38 60 34 66 C 28 74 22 82 22 88"/>
+  <!-- Right chromatid (lower arm) -->
+  <path class="chr"
+        d="M 50 50 C 58 54 62 60 66 66 C 72 74 78 82 78 88"/>
+
+  <!-- Chromatid tips (rounded ends) -->
+  <circle class="dot" cx="22" cy="14" r="4"/>
+  <circle class="dot" cx="78" cy="14" r="4"/>
+  <circle class="dot" cx="22" cy="88" r="4"/>
+  <circle class="dot" cx="78" cy="88" r="4"/>
+
+  <!-- Centromere highlight -->
+  <ellipse class="band" cx="50" cy="50" rx="10" ry="7"/>
+  <circle class="dot" cx="50" cy="50" r="4.5"/>
+
+  <!-- Chromatin bands (horizontal lines on arms) -->
+  <line x1="24" y1="24" x2="32" y2="30" stroke="#C87A20" stroke-width="2" opacity="0.4"/>
+  <line x1="66" y1="30" x2="74" y2="24" stroke="#C87A20" stroke-width="2" opacity="0.4"/>
+  <line x1="27" y1="78" x2="34" y2="70" stroke="#C87A20" stroke-width="2" opacity="0.4"/>
+  <line x1="66" y1="70" x2="74" y2="78" stroke="#C87A20" stroke-width="2" opacity="0.4"/>
+</svg>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Era 6 Icon: Bacterial Growth Curve (OD / Sigmoid) — Dynamic Phenotyping -->
+  <title>Growth Curve</title>
+  <defs>
+    <style>
+      .axis   { stroke: #8B3A9B; stroke-width: 2; stroke-linecap: round; }
+      .curve  { fill: none; stroke: #8B3A9B; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .shade  { fill: #8B3A9B; opacity: 0.12; }
+      .phase  { stroke: #8B3A9B; stroke-width: 1.2; stroke-dasharray: 4 3; opacity: 0.5; }
+      .label  { font-family: sans-serif; font-size: 7px; fill: #8B3A9B; opacity: 0.75; }
+      .dot    { fill: #8B3A9B; }
+    </style>
+  </defs>
+
+  <!-- Axes -->
+  <!-- Y-axis -->
+  <line class="axis" x1="14" y1="8" x2="14" y2="85"/>
+  <!-- X-axis -->
+  <line class="axis" x1="14" y1="85" x2="92" y2="85"/>
+  <!-- Arrowheads -->
+  <polygon class="dot" points="14,6 11,12 17,12"/>
+  <polygon class="dot" points="94,85 88,82 88,88"/>
+
+  <!-- Axis labels -->
+  <text x="6" y="50" class="label" transform="rotate(-90,6,50)">OD600</text>
+  <text x="88" y="94" class="label">Time</text>
+
+  <!--
+    Bacterial growth curve (sigmoid / logistic):
+    Lag phase:        x 14→28, y ~82 (flat)
+    Log phase:        x 28→58, steep rise from 82 → 30
+    Stationary:       x 58→78, y ~28 (plateau)
+    Decline (slight): x 78→90, y ~30→34
+  -->
+
+  <!-- Shaded area under curve -->
+  <path class="shade"
+        d="M 14 82
+           C 18 82 26 82 28 82
+           C 35 80 42 62 50 40
+           C 55 26 58 25 65 24
+           C 72 24 78 25 82 26
+           C 86 27 88 29 90 32
+           L 90 85 L 14 85 Z"/>
+
+  <!-- Growth curve (sigmoid) -->
+  <path class="curve"
+        d="M 14 82
+           C 18 82 26 82 28 82
+           C 35 80 42 62 50 40
+           C 55 26 58 25 65 24
+           C 72 24 78 25 82 26
+           C 86 27 88 29 90 32"/>
+
+  <!-- Phase separator lines (vertical dashed) -->
+  <line class="phase" x1="28" y1="24" x2="28" y2="85"/>
+  <line class="phase" x1="65" y1="24" x2="65" y2="85"/>
+
+  <!-- Phase labels -->
+  <text x="20" y="20" class="label" text-anchor="middle">Lag</text>
+  <text x="46" y="18" class="label" text-anchor="middle">Log</text>
+  <text x="72" y="18" class="label" text-anchor="middle">Stationary</text>
+
+  <!-- Data points on curve -->
+  <circle class="dot" cx="14" cy="82" r="2.5"/>
+  <circle class="dot" cx="28" cy="81" r="2.5"/>
+  <circle class="dot" cx="38" cy="65" r="2.5"/>
+  <circle class="dot" cx="50" cy="40" r="2.5"/>
+  <circle class="dot" cx="60" cy="26" r="2.5"/>
+  <circle class="dot" cx="72" cy="24" r="2.5"/>
+  <circle class="dot" cx="82" cy="26" r="2.5"/>
+  <circle class="dot" cx="90" cy="32" r="2.5"/>
+
+  <!-- AI / ML annotation dot with pulse ring (indicates AI monitoring) -->
+  <circle cx="50" cy="40" r="7" fill="none" stroke="#8B3A9B" stroke-width="1" opacity="0.4"/>
+  <circle cx="50" cy="40" r="11" fill="none" stroke="#8B3A9B" stroke-width="0.8" opacity="0.2"/>
+</svg>
